@@ -32,8 +32,8 @@ public class TextBoxTests {
         String birthMonth = "August";           // Month of birth.
         String birthYear = "1999";              // Year of birth.
         String birthDay = "14";                 // Day of birth.
-        String state = "Haryana";               // State.
-        String city = "Karnal";                 // City.
+        String state = "NCR";               // State.
+        String city = "Delhi";                 // City.
         String address = "Meera Ghati Park, Sector 14, Karnal, Haryana 132001"; // Address.
         String picture_1 = "img1.png";          // Image filename.
         String picturePath = "test/img/";       // Image path from source root. (Set the demoqa-tests-12 to source root)
@@ -50,7 +50,7 @@ public class TextBoxTests {
         $("[id=dateOfBirthInput]").click();                             // Entering the date of birth.
         $(".react-datepicker__month-select").selectOption(birthMonth);
         $(".react-datepicker__year-select").selectOption(birthYear);
-        $("[aria-label$='" + birthMonth + " " + birthDay + "th, " + birthYear + "']").click();
+        $(".react-datepicker__day--0"+birthDay).click();
         $("[id=subjectsInput]").setValue(subjects[0]).pressEnter();       // Entering subjects.
         $("[id=subjectsInput]").setValue(subjects[1]).pressEnter();
         $(byText(hobby[0])).click();                                               // Entering  hobbies.
